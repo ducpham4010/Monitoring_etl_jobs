@@ -1,0 +1,32 @@
+{
+    "job_id": {
+      "S": "rollup_daily_curated_t24_ld_to_ar_loan"
+    },
+    "data_zone": {
+      "S": "CURATED"
+    },
+    "date_execute": {
+      "NULL": true
+    },
+    "is_disable": {
+      "BOOL": false
+    },
+    "job_consumer": {
+      "NULL": true
+    },
+    "job_frequency": {
+      "S": "DAILY"
+    },
+    "job_owner": {
+      "NULL": true
+    },
+    "job_stage": {
+      "S": "G2C"
+    },
+    "sla_endtime": {
+      "NULL": true
+    },
+    "sla_starttime": {
+      "NULL": true
+    }
+  }

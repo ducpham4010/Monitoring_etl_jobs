@@ -1,0 +1,691 @@
+{
+    "job_id": {
+      "S": "rollup_daily_curated_t24_cst_to_idv"
+    },
+    "start_time": {
+      "N": "1691574376885"
+    },
+    "data_time": {
+      "S": "date=20230802"
+    },
+    "duration": {
+      "N": "560370"
+    },
+    "end_time": {
+      "N": "1691574937255"
+    },
+    "event": {
+      "M": {
+        "event_type": {
+          "S": "MANUAL"
+        },
+        "meta": {
+          "M": {}
+        },
+        "name": {
+          "S": "rollup_daily_curated_t24_cst_to_idv"
+        },
+        "params": {
+          "M": {
+            "data_date": {
+              "S": "2023-08-02"
+            },
+            "skip_conditions": {
+              "BOOL": true
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "S": "SUCCEEDED"
+    },
+    "step_function": {
+      "S": "arn:aws:states:ap-southeast-1:347781565809:stateMachine:tcb-orcs-sit-orcs_glue_job_v1"
+    },
+    "step_function_input": {
+      "M": {
+        "glue_args_adapter": {
+          "S": "legacy_g2i_1b"
+        },
+        "glue_crawler": {
+          "L": []
+        },
+        "glue_job": {
+          "S": "ds1-sit-apse-1-glue-jb-curated_t24_cst_to_idv"
+        },
+        "glue_job_config": {
+          "M": {
+            "Inputs": {
+              "L": [
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_customer__cob"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_customer__cob"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_sector"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_sector"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_fbnk_town_tcb"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_fbnk_town_tcb"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "roc_en_user"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "roc_en_user"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "roc_user_attribute"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "roc_user_attribute"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "roc_tcb_customer_ekyc"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "roc_tcb_customer_ekyc"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_job_title"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_job_title"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "roc_user_entity"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "roc_user_entity"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "app_data_tmp_cell_phone_bounce"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "app_data_tmp_cell_phone_bounce"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "cms_transaction"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "cms_transaction"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_card_info__cob"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_card_info__cob"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "digital_event_firebase_login"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "digital_event_firebase_login"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "tcbs_ib_smy_t_cas_alluser"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "tcbs_ib_smy_t_cas_alluser"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "gcm_customer"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "gcm_customer"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "tcbs_smy_maillog_noti_center_tracking"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "tcbs_smy_maillog_noti_center_tracking"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "app_data_mc_email_activities"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "app_data_mc_email_activities"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "app_data_email_verify_result"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "app_data_email_verify_result"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "t24_account_info__cob"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "t24_account_info__cob"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "glue_catalog": {
+                      "M": {
+                        "database": {
+                          "S": "tcb-ps5-data-sit-golden_ods"
+                        },
+                        "table": {
+                          "S": "tcbs_vw_customer_for_tcb"
+                        }
+                      }
+                    },
+                    "name": {
+                      "S": "tcbs_vw_customer_for_tcb"
+                    },
+                    "reader_type": {
+                      "S": "spark_sql"
+                    },
+                    "serde": {
+                      "M": {
+                        "format": {
+                          "S": "PARQUET"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "Outputs": {
+              "L": [
+                {
+                  "M": {
+                    "input_names": {
+                      "L": [
+                        {
+                          "S": "idv_scd2"
+                        },
+                        {
+                          "S": "idv"
+                        }
+                      ]
+                    },
+                    "targets": {
+                      "L": [
+                        {
+                          "M": {
+                            "catalog_name": {
+                              "S": "glue_catalog"
+                            },
+                            "db_name": {
+                              "S": "`tcb-sit-golden_curated`"
+                            },
+                            "primary_columns": {
+                              "L": [
+                                {
+                                  "S": "unq_id_src_stm"
+                                },
+                                {
+                                  "S": "src_stm_id"
+                                }
+                              ]
+                            },
+                            "serde": {
+                              "M": {
+                                "format": {
+                                  "S": "iceberg"
+                                }
+                              }
+                            },
+                            "src_stms": {
+                              "L": [
+                                {
+                                  "S": "src_stm_id"
+                                }
+                              ]
+                            },
+                            "tbl_name": {
+                              "S": "idv_scd2"
+                            },
+                            "writer_type": {
+                              "S": "CUSTOM"
+                            }
+                          }
+                        },
+                        {
+                          "M": {
+                            "catalog_name": {
+                              "S": "glue_catalog"
+                            },
+                            "db_name": {
+                              "S": "`tcb-sit-golden_curated`"
+                            },
+                            "primary_columns": {
+                              "L": [
+                                {
+                                  "S": "unq_id_src_stm"
+                                },
+                                {
+                                  "S": "src_stm_id"
+                                }
+                              ]
+                            },
+                            "serde": {
+                              "M": {
+                                "format": {
+                                  "S": "iceberg"
+                                }
+                              }
+                            },
+                            "src_stms": {
+                              "L": [
+                                {
+                                  "S": "src_stm_id"
+                                }
+                              ]
+                            },
+                            "tbl_name": {
+                              "S": "idv"
+                            },
+                            "writer_type": {
+                              "S": "CUSTOM"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "step_function_run_id": {
+      "S": "arn:aws:states:ap-southeast-1:347781565809:execution:tcb-orcs-sit-orcs_wrapper_v1:rollup_daily_curated_t24_cst_to_idv_1691574375926_abcccc39"
+    },
+    "ttl": {
+      "N": "1692179176"
+    },
+    "uid": {
+      "S": "abcccc39-5cf0-475a-8f18-c07ad9e7cba1"
+    }
+  }
